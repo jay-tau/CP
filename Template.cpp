@@ -31,8 +31,8 @@ typedef pair<int,int> pi;
 #define mp make_pair
 
 #define fo(i, n) for (int (i) = 0; (i) < (n); ++(i))
-#define fo1(i, n) for (int (i) = 1; (i) <= (n); ++(i)
-#define foll(i, n) for (ll (i) = 0; (i) < (n); ++(i)
+#define fo1(i, n) for (int (i) = 1; (i) <= (n); ++(i))
+#define foll(i, n) for (ll (i) = 0; (i) < (n); ++(i))
 #define fo1ll(i, n) for (ll (i) = 1; (i) <= (n); ++(i))
 
 ll modpower(ll x, ll y, ll p){
