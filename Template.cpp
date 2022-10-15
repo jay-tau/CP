@@ -1,6 +1,4 @@
 /*
-    Coded by : Dip Turkar
-    
     {TIPS WHILE STARTING}
     --using a set? check for PBDS!!!
     --modulo of negative numbers is not a%b, it is a%b + abs(b)!!!!!!!
@@ -32,10 +30,10 @@ typedef pair<int,int> pi;
 #define pb push_back
 #define mp make_pair
 
-#define fo(i, n) for (int (i) = 0; (i) < (n); (i)++)
-#define fo1(i, n) for (int (i) = 1; (i) <= (n); (i)++)
-#define foll(i, n) for (ll (i) = 0; (i) < (n); (i)++)
-#define fo1ll(i, n) for (ll (i) = 1; (i) <= (n); (i)++)
+#define fo(i, n) for (int (i) = 0; (i) < (n); ++(i))
+#define fo1(i, n) for (int (i) = 1; (i) <= (n); ++(i)
+#define foll(i, n) for (ll (i) = 0; (i) < (n); ++(i)
+#define fo1ll(i, n) for (ll (i) = 1; (i) <= (n); ++(i))
 
 ll modpower(ll x, ll y, ll p){
     ll res = 1;x = x % p;
@@ -66,31 +64,53 @@ ll factmod(ll n, ll p) {
     return res;
 }
 
+template <typename T1, typename T2> // cin >> pair<T1, T2>
+istream &operator>>(istream &istream, pair<T1, T2> &p) {
+    return (istream >> p.first >> p.second);
+}
+
+template <typename T> // cin >> vector<T>
+istream &operator>>(istream &istream, vector<T> &v) {
+    for (auto &it : v)
+        cin >> it;
+    return istream;
+}
+
+template <typename T1, typename T2> // cout << pair<T1, T2>
+ostream &operator<<(ostream &ostream, const pair<T1, T2> &p) {
+    return (ostream << p.first << " " << p.second);
+}
+template <typename T> // cout << vector<T>
+ostream &operator<<(ostream &ostream, const vector<T> &c) {
+    for (auto &it : c)
+        cout << it << " ";
+    return ostream;
+}
+
 #define fastio()                  \
-	ios_base::sync_with_stdio(0); \
-	cin.tie(0);                   \
-	cout.tie(0)
+    ios_base::sync_with_stdio(0); \
+    cin.tie(0);                   \
+    cout.tie(0)
 
 #define test() \
-	int _;     \
-	cin >> _;  \
-	while (_--)
+    int _;     \
+    cin >> _;  \
+    while (_--)
 
 #define test1() \
-	int t;      \
-	t = 1;      \
-	while (t--)
+    int t;      \
+    t = 1;      \
+    while (t--)
 
 
 void solve() {
-	TODO
-
+    TODO
 }
 
 int main() {
-	fastio();
-	test() {
-		solve();
-	}
-	return 0;
+    fastio();
+    test() {
+        solve();
+    }
+    return 0;
 }
