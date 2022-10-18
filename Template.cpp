@@ -1,13 +1,3 @@
-/*
-    {TIPS WHILE STARTING}
-    --using a set? check for PBDS!!!
-    --modulo of negative numbers is not a%b, it is a%b + abs(b)!!!!!!!
-    --lower_bound and set.lower_bound are different, use it wisely
-    --string .append() or += is O(1), but s = s + s is O(n), use wisely
-*/
-
-
-
 /**
  *    author:  jaytau
 **/
