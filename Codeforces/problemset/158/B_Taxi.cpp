@@ -106,7 +106,7 @@ void solve() {
 	int ans = 0;
 	ans += v[4];
 	v[4] = 0;
-	
+
 	ans += v[3];
 	if (v[3] > v[1])
 		v[1] = 0;
