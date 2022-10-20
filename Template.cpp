@@ -9,6 +9,7 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef vector<ll> vll;
 typedef pair<int,int> pi;
+typedef pair<ll, ll> pll;
 
 #define endl "\n"
 #define YES cout << "YES" << endl
