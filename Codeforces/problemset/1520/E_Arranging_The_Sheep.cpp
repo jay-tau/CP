@@ -37,7 +37,7 @@ ll modinv(ll x, ll p){return modpower(x, p - 2, p);}
 ll modmul(ll a,ll b, ll p){return (a%p*b%p)%p;}
 ll modadd(ll a,ll b, ll p){return (a%p+b%p)%p;}
 ll modsub(ll a,ll b, ll p){return (a%p-b%p+p)%p;}
-ll moddiv(ll a,ll b, ll p){return modmul(a,modinv(b, p), p);}
+ll moddiv(ll a,ll b ll p){return modmul(a,modinv(b, p), p);}
 ll factmod(ll n, ll p) {
     vector<ll> f(p);
     f[0] = 1;
