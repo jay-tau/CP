@@ -89,9 +89,9 @@ ostream &operator<<(ostream &ostream, const vector<T> &c) {
     while (_--)
 
 #define test1() \
-    int t;      \
-    t = 1;      \
-    while (t--)
+    int _;      \
+    _ = 1;      \
+    while (_--)
 
 
 void solve() {
