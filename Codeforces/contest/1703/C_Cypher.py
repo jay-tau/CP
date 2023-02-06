@@ -8,9 +8,9 @@ for _ in range(int(input())):
         moves = temp[1]
         net_move = 0
         for move in moves:
-            if move == 'U':
+            if move == "U":
                 net_move += 1
             else:
                 net_move -= 1
-        print(((final_sequence[i] - net_move)%10), end=' ')
+        print(((final_sequence[i] - net_move) % 10), end=" ")
     print()
