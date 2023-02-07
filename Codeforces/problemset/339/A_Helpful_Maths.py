@@ -1,1 +1,1 @@
-print('+'.join(map(str, (sorted(map(int, input().split('+')))))))
+print("+".join(map(str, (sorted(map(int, input().split("+")))))))
