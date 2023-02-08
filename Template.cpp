@@ -96,7 +96,7 @@ ostream &operator<<(ostream &ostream, const vector<T> &c) {
   _ = 1;                                                                       \
   while (_--)
 
-void solve() { TODO }
+void solve() {}
 
 int main() {
   fastio();
