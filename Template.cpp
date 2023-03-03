@@ -83,8 +83,7 @@ ostream &operator<<(ostream &ostream, const vector<T> &c) {
 
 #define fastio()                                                               \
   ios_base::sync_with_stdio(0);                                                \
-  cin.tie(0);                                                                  \
-  cout.tie(0)
+  cin.tie(NULL);
 
 #define test()                                                                 \
   int _;                                                                       \
