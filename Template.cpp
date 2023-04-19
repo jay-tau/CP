@@ -42,7 +42,7 @@ ll modmul(ll a, ll b, ll p) { return (a % p * b % p) % p; }
 ll modadd(ll a, ll b, ll p) { return (a % p + b % p) % p; }
 ll modsub(ll a, ll b, ll p) { return (a % p - b % p + p) % p; }
 ll moddiv(ll a, ll b, ll p) { return modmul(a, modinv(b, p), p); }
-ll factmod(ll n, ll p) {
+ll modfactorial(ll n, ll p) {
   vector<ll> f(p);
   f[0] = 1;
   for (ll i = 1; i < p; i++)
@@ -99,6 +99,7 @@ void solve() {}
 
 int main() {
   fastio();
-  test() { solve(); }
+  test()
+    solve();
   return 0;
 }
