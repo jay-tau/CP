@@ -1,10 +1,13 @@
+// User function Template for C++
+
 void isPrime(int n) {
-  string ans = (n == 1) ? "No" : "Yes";
+  bool is_prime = (n == 1) ? false : true;
   for (int i = 2; i <= sqrt(n); i++) {
     if (n % i == 0) {
-      ans = "No";
+      is_prime = false;
       break;
     }
   }
-  cout << ans << endl;
+  cout << (is_prime ? "Yes" : "No");
+  cout << endl;
 }
