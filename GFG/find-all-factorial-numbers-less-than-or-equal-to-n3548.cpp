@@ -1,6 +1,6 @@
 // User function Template for C++
 class Solution {
-public:
+ public:
   vector<long long> factorialNumbers(long long N) {
     vector<long long> ans;
     long long f = 1, i = 1;

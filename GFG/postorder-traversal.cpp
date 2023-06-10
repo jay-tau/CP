@@ -1,10 +1,6 @@
 
 
-
-
 // User function Template for C++
-
-
 
 /* A binary tree node has data, pointer to left child
 
@@ -22,19 +18,12 @@ struct Node
 
 }; */
 
-
-
 // Function to return a list containing the postorder traversal of the tree.
 
 vector<int> postOrder(Node* root) {
-
   vector<int> traversal;
 
-
-
   if (root == nullptr) return {};
-
-
 
   for (auto x : postOrder(root->left)) traversal.push_back(x);
 
@@ -42,9 +31,5 @@ vector<int> postOrder(Node* root) {
 
   traversal.push_back(root->data);
 
-
-
   return traversal;
-
 }
-

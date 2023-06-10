@@ -1,7 +1,7 @@
 // User function Template for C++
 
 class Solution {
-public:
+ public:
   string is_palindrome(int n) {
     int n_rev = 0, n_copy = n;
     while (n > 0) {

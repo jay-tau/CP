@@ -1,11 +1,10 @@
 class Solution {
-public:
+ public:
   // Function to find floor of x
   // n: size of vector
   // x: element whose floor is to find
   int findFloor(vector<long long> v, long long n, long long x) {
-    if (v[0] > x)
-      return -1;
+    if (v[0] > x) return -1;
 
     int l = 0, r = n - 1;
     while (l < r) {

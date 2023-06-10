@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   // Function to find element in sorted array
   // arr: input array
   // N: size of array

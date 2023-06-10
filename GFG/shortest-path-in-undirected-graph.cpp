@@ -1,16 +1,16 @@
 // User function Template for C++
 class Solution {
-public:
+ public:
   vector<int> shortestPath(int N, int M, vector<vector<int>> &edges) {
     vector<vector<pair<int, int>>> adj(N + 1, vector<pair<int, int>>());
 
     for (auto edge : edges)
-      adj[edge[0]].push_back({edge[1], edge[2]}); // {Node, Distance}
+      adj[edge[0]].push_back({edge[1], edge[2]});  // {Node, Distance}
 
     vector<int> distance(N, -1);
     queue<pair<int, int>> q;
     distance[0] = 0;
-    q.push({0, 0}); // {Node, distance}
+    q.push({0, 0});  // {Node, distance}
     while (!q.empty()) {
       pair<int, int> current_pair = q.front();
       q.pop();

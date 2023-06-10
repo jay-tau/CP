@@ -1,5 +1,5 @@
 class Solution {
-public:
+ public:
   string compareNM(int n, int m) {
     string s;
     if (n < m)
