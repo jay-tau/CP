@@ -20,17 +20,14 @@ struct Node
 
 // Function to return a list containing the postorder traversal of the tree.
 
-vector<int> postOrder(Node *root) {
+vector<int> postOrder(Node* root) {
   vector<int> traversal;
 
-  if (root == nullptr)
-    return {};
+  if (root == nullptr) return {};
 
-  for (auto x : postOrder(root->left))
-    traversal.push_back(x);
+  for (auto x : postOrder(root->left)) traversal.push_back(x);
 
-  for (auto x : postOrder(root->right))
-    traversal.push_back(x);
+  for (auto x : postOrder(root->right)) traversal.push_back(x);
 
   traversal.push_back(root->data);
 

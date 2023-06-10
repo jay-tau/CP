@@ -1,9 +1,9 @@
 class Solution {
-public:
+ public:
   // Function to find the shortest distance of all the vertices
   // from the source vertex S.
   vector<int> dijkstra(int V, vector<vector<int>> adj[], int S) {
-    set<pair<int, int>> pq; // {distance, node}
+    set<pair<int, int>> pq;  // {distance, node}
     vector<int> distance(V, INT_MAX);
 
     distance[S] = 0;
