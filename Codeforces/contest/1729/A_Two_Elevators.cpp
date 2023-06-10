@@ -21,19 +21,19 @@ typedef pair<int, int> intpair;
 
 #define fo(i, n) for (int(i) = 0; (i) < (n); (i)++)
 
-#define fastio()                                                               \
-  ios_base::sync_with_stdio(0);                                                \
-  cin.tie(0);                                                                  \
+#define fastio()                \
+  ios_base::sync_with_stdio(0); \
+  cin.tie(0);                   \
   cout.tie(0)
 
-#define test()                                                                 \
-  int _;                                                                       \
-  cin >> _;                                                                    \
+#define test() \
+  int _;       \
+  cin >> _;    \
   while (_--)
 
-#define test1()                                                                \
-  int t;                                                                       \
-  t = 1;                                                                       \
+#define test1() \
+  int t;        \
+  t = 1;        \
   while (t--)
 
 void solve() {

@@ -32,8 +32,8 @@ int main() {
         back_index--;
         back_pointer += l[back_index];
       }
-    } // end while
+    }  // end while
     cout << count << '\n';
-  } // end testcases
+  }  // end testcases
   return 0;
 }

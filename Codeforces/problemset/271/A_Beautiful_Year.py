@@ -1,6 +1,5 @@
 from locale import currency
 
-
 n = int(input())
 
 for i in range(n + 1, 9999 + 1):

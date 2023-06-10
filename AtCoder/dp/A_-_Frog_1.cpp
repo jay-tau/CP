@@ -3,6 +3,7 @@
  **/
 
 #include <bits/stdc++.h>
+
 #include <climits>
 using namespace std;
 
@@ -31,8 +32,7 @@ ll modpower(ll x, ll y, ll p) {
   ll res = 1;
   x = x % p;
   while (y > 0) {
-    if (y & 1)
-      res = (res * x) % p;
+    if (y & 1) res = (res * x) % p;
     y = y >> 1;
     x = (x * x) % p;
   }
@@ -46,68 +46,61 @@ ll moddiv(ll a, ll b, ll p) { return modmul(a, modinv(b, p), p); }
 ll factmod(ll n, ll p) {
   vector<ll> f(p);
   f[0] = 1;
-  for (ll i = 1; i < p; i++)
-    f[i] = f[i - 1] * i % p;
+  for (ll i = 1; i < p; i++) f[i] = f[i - 1] * i % p;
 
   ll res = 1;
   while (n > 1) {
-    if ((n / p) % 2)
-      res = p - res;
+    if ((n / p) % 2) res = p - res;
     res = res * f[n % p] % p;
     n /= p;
   }
   return res;
 }
 
-template <typename T1, typename T2> // cin >> pair<T1, T2>
+template <typename T1, typename T2>  // cin >> pair<T1, T2>
 istream &operator>>(istream &istream, pair<T1, T2> &p) {
   return (istream >> p.first >> p.second);
 }
 
-template <typename T> // cin >> vector<T>
+template <typename T>  // cin >> vector<T>
 istream &operator>>(istream &istream, vector<T> &v) {
-  for (auto &it : v)
-    cin >> it;
+  for (auto &it : v) cin >> it;
   return istream;
 }
 
-template <typename T1, typename T2> // cout << pair<T1, T2>
+template <typename T1, typename T2>  // cout << pair<T1, T2>
 ostream &operator<<(ostream &ostream, const pair<T1, T2> &p) {
   return (ostream << p.first << " " << p.second);
 }
-template <typename T> // cout << vector<T>
+template <typename T>  // cout << vector<T>
 ostream &operator<<(ostream &ostream, const vector<T> &c) {
-  for (auto &it : c)
-    cout << it << " ";
+  for (auto &it : c) cout << it << " ";
   return ostream;
 }
 
-#define fastio()                                                               \
-  ios_base::sync_with_stdio(0);                                                \
-  cin.tie(0);                                                                  \
+#define fastio()                \
+  ios_base::sync_with_stdio(0); \
+  cin.tie(0);                   \
   cout.tie(0)
 
-#define test()                                                                 \
-  int _;                                                                       \
-  cin >> _;                                                                    \
+#define test() \
+  int _;       \
+  cin >> _;    \
   while (_--)
 
-#define test1()                                                                \
-  int _;                                                                       \
-  _ = 1;                                                                       \
+#define test1() \
+  int _;        \
+  _ = 1;        \
   while (_--)
 
 int n;
 vi dp;
 
 int recursive_cost_fn(vi &h, int ptr) {
-  if (dp[ptr] != -1)
-    return dp[ptr];
+  if (dp[ptr] != -1) return dp[ptr];
 
-  if (ptr == n - 1)
-    return dp[n - 1] = 0;
-  if (ptr == n - 2)
-    return dp[n - 2] = abs(h[ptr] - h[ptr + 1]);
+  if (ptr == n - 1) return dp[n - 1] = 0;
+  if (ptr == n - 2) return dp[n - 2] = abs(h[ptr] - h[ptr + 1]);
 
   return dp[ptr] =
              min(abs(h[ptr] - h[ptr + 1]) + recursive_cost_fn(h, ptr + 1),

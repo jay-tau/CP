@@ -21,23 +21,24 @@ typedef pair<int, int> pi;
 
 #define fo(i, n) for (int(i) = 0; (i) < (n); (i)++)
 
-#define fastio()                                                               \
-  ios_base::sync_with_stdio(0);                                                \
-  cin.tie(0);                                                                  \
+#define fastio()                \
+  ios_base::sync_with_stdio(0); \
+  cin.tie(0);                   \
   cout.tie(0)
 
-#define test()                                                                 \
-  int _;                                                                       \
-  cin >> _;                                                                    \
+#define test() \
+  int _;       \
+  cin >> _;    \
   while (_--)
 
-#define test1()                                                                \
-  int t;                                                                       \
-  t = 1;                                                                       \
+#define test1() \
+  int t;        \
+  t = 1;        \
   while (t--)
 
-bool sortPairDescAsc(const pair<int, int> &a,
-                     const pair<int, int> &b) { // Sorts (descending, ascending)
+bool sortPairDescAsc(
+    const pair<int, int> &a,
+    const pair<int, int> &b) {  // Sorts (descending, ascending)
   if (a.F != b.F)
     return (a.first > b.first);
   else
@@ -86,11 +87,9 @@ void solve() {
       if (current_char_value < start_char_value) {
         continue;
       }
-    } else { // When step is -1
-      if (current_char_value < end_char_value)
-        break;
-      if (current_char_value > start_char_value)
-        continue;
+    } else {  // When step is -1
+      if (current_char_value < end_char_value) break;
+      if (current_char_value > start_char_value) continue;
     }
 
     num_jumps++;
@@ -100,11 +99,11 @@ void solve() {
   }
 
   cout << net_cost << " " << num_jumps
-       << endl;              // Print 1st line of required output
-  fo(i, jump_indices.size()) // Print 2nd line of required output
+       << endl;               // Print 1st line of required output
+  fo(i, jump_indices.size())  // Print 2nd line of required output
       cout
       << jump_indices[i] << " ";
-  cout << endl; // Move to next line for next testcase's output
+  cout << endl;  // Move to next line for next testcase's output
 }
 
 int main() {

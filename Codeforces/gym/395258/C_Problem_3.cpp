@@ -22,19 +22,19 @@ typedef pair<int, int> pi;
 #define fo(i, n) for (int(i) = 0; (i) < (n); (i)++)
 #define fo1(i, n) for (int(i) = 1; (i) <= (n); (i)++)
 
-#define fastio()                                                               \
-  ios_base::sync_with_stdio(0);                                                \
-  cin.tie(0);                                                                  \
+#define fastio()                \
+  ios_base::sync_with_stdio(0); \
+  cin.tie(0);                   \
   cout.tie(0)
 
-#define test()                                                                 \
-  int _;                                                                       \
-  cin >> _;                                                                    \
+#define test() \
+  int _;       \
+  cin >> _;    \
   while (_--)
 
-#define test1()                                                                \
-  int t;                                                                       \
-  t = 1;                                                                       \
+#define test1() \
+  int t;        \
+  t = 1;        \
   while (t--)
 
 void solve() {
@@ -51,12 +51,12 @@ void solve() {
     c[r + 1]--;
   }
   fo1(i, N) {
-    c[i] += c[i - 1]; // Prefix sum
+    c[i] += c[i - 1];  // Prefix sum
   }
   fo1(i, N) {
-    c[i] =
-        c[i - 1] + (c[i] >= k ? 1 : 0); // Adds previous if it is greater than
-                                        // equal to k, ie conditional prefix sum
+    c[i] = c[i - 1] +
+           (c[i] >= k ? 1 : 0);  // Adds previous if it is greater than
+                                 // equal to k, ie conditional prefix sum
   }
   while (q--) {
     int a, b;

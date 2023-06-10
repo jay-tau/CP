@@ -18,7 +18,7 @@ int main() {
       } else {
         even.push_back(l[i] % 2);
       }
-    } // end for(n)
+    }  // end for(n)
     int s_odd = accumulate(odd.begin(), odd.end(), 0),
         s_even = accumulate(even.begin(), even.end(), 0);
     if ((s_odd == 0 || s_odd == odd.size()) &&

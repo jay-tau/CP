@@ -2,8 +2,9 @@
  *    author:  jaytau
  **/
 
-#include <algorithm>
 #include <bits/stdc++.h>
+
+#include <algorithm>
 using namespace std;
 
 typedef long long ll;
@@ -31,8 +32,7 @@ ll modpower(ll x, ll y, ll p) {
   ll res = 1;
   x = x % p;
   while (y > 0) {
-    if (y & 1)
-      res = (res * x) % p;
+    if (y & 1) res = (res * x) % p;
     y = y >> 1;
     x = (x * x) % p;
   }
@@ -46,55 +46,51 @@ ll moddiv(ll a, ll b, ll p) { return modmul(a, modinv(b, p), p); }
 ll factmod(ll n, ll p) {
   vector<ll> f(p);
   f[0] = 1;
-  for (ll i = 1; i < p; i++)
-    f[i] = f[i - 1] * i % p;
+  for (ll i = 1; i < p; i++) f[i] = f[i - 1] * i % p;
 
   ll res = 1;
   while (n > 1) {
-    if ((n / p) % 2)
-      res = p - res;
+    if ((n / p) % 2) res = p - res;
     res = res * f[n % p] % p;
     n /= p;
   }
   return res;
 }
 
-template <typename T1, typename T2> // cin >> pair<T1, T2>
+template <typename T1, typename T2>  // cin >> pair<T1, T2>
 istream &operator>>(istream &istream, pair<T1, T2> &p) {
   return (istream >> p.first >> p.second);
 }
 
-template <typename T> // cin >> vector<T>
+template <typename T>  // cin >> vector<T>
 istream &operator>>(istream &istream, vector<T> &v) {
-  for (auto &it : v)
-    cin >> it;
+  for (auto &it : v) cin >> it;
   return istream;
 }
 
-template <typename T1, typename T2> // cout << pair<T1, T2>
+template <typename T1, typename T2>  // cout << pair<T1, T2>
 ostream &operator<<(ostream &ostream, const pair<T1, T2> &p) {
   return (ostream << p.first << " " << p.second);
 }
-template <typename T> // cout << vector<T>
+template <typename T>  // cout << vector<T>
 ostream &operator<<(ostream &ostream, const vector<T> &c) {
-  for (auto &it : c)
-    cout << it << " ";
+  for (auto &it : c) cout << it << " ";
   return ostream;
 }
 
-#define fastio()                                                               \
-  ios_base::sync_with_stdio(0);                                                \
-  cin.tie(0);                                                                  \
+#define fastio()                \
+  ios_base::sync_with_stdio(0); \
+  cin.tie(0);                   \
   cout.tie(0)
 
-#define test()                                                                 \
-  int _;                                                                       \
-  cin >> _;                                                                    \
+#define test() \
+  int _;       \
+  cin >> _;    \
   while (_--)
 
-#define test1()                                                                \
-  int _;                                                                       \
-  _ = 1;                                                                       \
+#define test1() \
+  int _;        \
+  _ = 1;        \
   while (_--)
 
 struct DSU {
@@ -106,26 +102,24 @@ struct DSU {
     min_element.resize(n);
     max_element.resize(n);
     for (int i = 0; i < n; i++) {
-      parent[i] = -1; // All root nodes have no parent
+      parent[i] = -1;  // All root nodes have no parent
       set_size[i] = 1;
       min_element[i] = i, max_element[i] = i;
     }
   }
 
   int find_parent(int i) {
-    if (parent[i] == -1)
-      return i;
-    return (parent[i] = find_parent(parent[i])); // Implements path compression
+    if (parent[i] == -1) return i;
+    return (parent[i] = find_parent(parent[i]));  // Implements path compression
   }
 
-  bool merge(int a, int b) { // Returns false if already in the same set
+  bool merge(int a, int b) {  // Returns false if already in the same set
     int parent_a = find_parent(a), parent_b = find_parent(b);
-    if (same(a, b))
-      return false;
+    if (same(a, b)) return false;
     // Implements small-to-large merging
     if (set_size[parent_a] < set_size[parent_b])
       swap(parent_a,
-           parent_b); // Ensure that parent_a is always larger than parent_b
+           parent_b);  // Ensure that parent_a is always larger than parent_b
     parent[parent_b] = parent_a;
 
     set_size[parent_a] += set_size[parent_b];
