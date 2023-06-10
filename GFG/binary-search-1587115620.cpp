@@ -1,7 +1,7 @@
 // User function template for C++
 
 class Solution {
- public:
+public:
   int binarysearch(int arr[], int n, int k) {
     int l = 0, r = n - 1;
     int mid;

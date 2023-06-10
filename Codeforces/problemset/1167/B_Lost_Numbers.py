@@ -1,5 +1,5 @@
-from sys import stdout
 from statistics import mode
+from sys import stdout
 
 special_numbers = [4, 8, 15, 16, 23, 42]
 true_array = [-1 for _ in range(6)]

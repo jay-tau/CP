@@ -1,5 +1,5 @@
 class Solution {
- public:
+public:
   // Function to return Breadth First Traversal of given graph.
   vector<int> bfsOfGraph(int V, vector<int> adj[]) {
     vector<int> bfs;
@@ -12,12 +12,14 @@ class Solution {
     while (!q.empty()) {
       int current_node = q.front();
       q.pop();
-      if (visited[current_node]) continue;
+      if (visited[current_node])
+        continue;
 
       visited[current_node] = true;
       bfs.push_back(current_node);
 
-      for (auto adj_node : adj[current_node]) q.push(adj_node);
+      for (auto adj_node : adj[current_node])
+        q.push(adj_node);
     }
     return bfs;
   }

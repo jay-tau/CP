@@ -1,11 +1,12 @@
 // User Fuction template for C++
 
 class Solution {
- private:
+private:
   int max_sum = INT_MIN;
 
-  int search(Node* node) {
-    if (node == nullptr) return 0;
+  int search(Node *node) {
+    if (node == nullptr)
+      return 0;
 
     int left_sum = max(0, search(node->left)),
         right_sum = max(0, search(node->right));
@@ -16,9 +17,9 @@ class Solution {
     return (node->data) + max(left_sum, right_sum);
   }
 
- public:
+public:
   // Function to return maximum path sum from any node in a tree.
-  int findMaxSum(Node* root) {
+  int findMaxSum(Node *root) {
     search(root);
     return max_sum;
   }

@@ -99,7 +99,6 @@ void solve() {}
 
 int main() {
   fastio();
-  test()
-    solve();
+  test() solve();
   return 0;
 }

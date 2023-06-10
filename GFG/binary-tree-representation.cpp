@@ -17,7 +17,7 @@ struct node *newNode(int data) {
 }*/
 
 class Solution {
- public:
+public:
   void create_tree(node *root0, vector<int> &vec) {
     int i = 0;
 

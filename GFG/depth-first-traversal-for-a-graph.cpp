@@ -1,5 +1,5 @@
 class Solution {
- public:
+public:
   void dfsHelper(int starting_node, vector<int> adj[], vector<int> &visited,
                  queue<int> q, vector<int> &dfs) {
     q.push(starting_node);
@@ -8,13 +8,15 @@ class Solution {
       int current_node = q.front();
       q.pop();
 
-      if (visited[current_node]) continue;
+      if (visited[current_node])
+        continue;
 
       visited[current_node] = true;
       dfs.push_back(current_node);
 
       for (auto adj_node : adj[current_node]) {
-        if (!visited[adj_node]) dfsHelper(adj_node, adj, visited, q, dfs);
+        if (!visited[adj_node])
+          dfsHelper(adj_node, adj, visited, q, dfs);
       }
     }
   }

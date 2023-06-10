@@ -1,5 +1,5 @@
 class Solution {
- public:
+public:
   long long reversedBits(long long X) {
     long long ans = 0;
     int n = 32;

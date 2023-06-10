@@ -13,19 +13,20 @@ struct Node {
 */
 
 class Solution {
- public:
+public:
   // Function to store the zig zag order traversal of tree in a list.
-  vector<int> zigZagTraversal(Node* root) {
-    if (root == nullptr) return {};
+  vector<int> zigZagTraversal(Node *root) {
+    if (root == nullptr)
+      return {};
 
     vector<int> traversal;
-    deque<Node*> q;
+    deque<Node *> q;
     bool left_to_right = true;
 
     q.push_back(root);
 
     while (!q.empty()) {
-      Node* current_node;
+      Node *current_node;
       int level_size = q.size();
 
       while (level_size--) {
@@ -37,7 +38,8 @@ class Solution {
           q.pop_back();
         }
 
-        if (current_node == nullptr) continue;
+        if (current_node == nullptr)
+          continue;
 
         traversal.push_back(current_node->data);
 

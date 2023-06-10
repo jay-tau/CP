@@ -1,6 +1,6 @@
 // User function Template for C++
 class Solution {
- public:
+public:
   string armstrongNumber(int n) {
     int sum = 0, n_copy = n;
     while (n > 0) {

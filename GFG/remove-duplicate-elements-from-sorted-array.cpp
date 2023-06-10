@@ -1,7 +1,7 @@
 // User function template for C++
 
 class Solution {
- public:
+public:
   int remove_duplicate(int a[], int n) {
     int writing_index = 1;
     for (int i = 1; i < n; ++i) {

@@ -1,5 +1,5 @@
 class Solution {
- public:
+public:
   void printTriangle(int n) {
     for (char i = 0; i < n; ++i) {
       for (int j = 0; j <= i; ++j) {
